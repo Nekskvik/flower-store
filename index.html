@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветочный магазин — Букеты в пробирках</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/>
+              <path d="M12 22V8"/>
+              <path d="M9 12l3-3 3 3"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            <span class="name">Flora Lab</span>
+            <span class="tag">цветы в пробирках</span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="nav">
+          <a href="#catalog">Каталог</a>
+          <a href="#cta">Обслуживание</a>
+          <a href="#cta">Декор</a>
+          <a href="#cta">Отзывы</a>
+          <a href="#cta">Контакты</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="header-cta">
+          <a href="tel:+7111111111" class="header-phone">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/>
+            </svg>
+            +7 (111) 111-11-11
+          </a>
+          <a href="#cta" class="btn">Оставить заявку</a>
+          <button class="burger" id="burgerBtn" aria-label="Меню">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="mobile-nav" id="mobileNav">
+    <a href="#catalog">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+      Каталог
+    </a>
+    <a href="#cta">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+      Обслуживание
+    </a>
+    <a href="#cta">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>
+      Декор
+    </a>
+    <a href="#cta">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Отзывы
+    </a>
+    <a href="#cta">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+      Контакты
+    </a>
+    <a href="#cta" class="btn">Оставить заявку</a>
+    <a href="tel:+79152806622" class="mobile-phone">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+      +7 (915) 280-66-22
+    </a>
+  </aside>
+
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+
+    <span class="float-flower" style="top: 16%; right: 8%; width: 44px; height: 44px; animation-delay: 0s;">
+      <svg viewBox="0 0 24 24"><path d="M12 2c1 2.5 2 4 4 4 2 0 4-1.5 4-4M12 2c-1 2.5-2 4-4 4-2 0-4-1.5-4-4M12 22c-1-2.5-2-4-4-4-2 0-4 1.5-4 4M12 22c1-2.5 2-4 4-4 2 0 4 1.5 4 4M2 12c2.5-1 4-2 4-4 0-2-1.5-4-4-4M2 12c2.5 1 4 2 4 4 0 2-1.5 4-4 4M22 12c-2.5-1-4-2-4-4 0-2 1.5-4 4-4M22 12c-2.5 1-4 2-4 4 0 2 1.5 4 4 4M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg>
+    </span>
+    <span class="float-flower" style="top: 62%; right: 18%; width: 32px; height: 32px; animation-delay: 3.5s;">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="12" cy="12" r="2"/></svg>
+    </span>
+    <span class="float-flower" style="top: 28%; right: 32%; width: 38px; height: 38px; animation-delay: 7s;">
+      <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+    </span>
+    <span class="float-flower" style="bottom: 14%; left: 5%; width: 40px; height: 40px; animation-delay: 2s;">
+      <svg viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2 1 3.5 2 4.5L12 22l4-9.5c1-1 2-2.5 2-4.5a6 6 0 0 0-6-6z"/><circle cx="12" cy="8" r="2"/></svg>
+    </span>
+
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>
+          Доставка букетов в пробирках
+        </span>
+        <h1>Букет в пробирках — новый тренд в декоре</h1>
+        <p class="subhead">Абонентское обслуживание для корпоративных клиентов от 30 дней</p>
+
+        <ul class="hero-features">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            Регулярная замена цветов вместе с пробирками
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            Аренда стоек от 3-х месяцев
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            Платите только за цветы
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            Выбирайте сорт
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            Экономьте время
+          </li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="#cta" class="btn">Попробовать бесплатно</a>
+          <a href="#catalog" class="btn btn-outline">Смотреть каталог</a>
+        </div>
+        <p class="hero-gift">
+          <svg class="icon" viewBox="0 0 24 24">
+            <rect x="3" y="8" width="18" height="4" rx="1"/>
+            <path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>
+            <path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/>
+          </svg>
+          К первому заказу — подарок
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="divider-flower reveal">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/></svg>
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/></svg>
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/></svg>
+      </div>
+      <h2 class="reveal">Цветы в пробирках для украшения интерьера</h2>
+      <p class="subhead reveal d1">Сохраняют свежесть 10–25 дней без химии и спецухода</p>
+
+      <div class="grid-4">
+        <div class="card reveal d1">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/><path d="M12 22V8"/><path d="M9 12l3-3 3 3"/></svg>
+          </div>
+          <h4>Экологичность</h4>
+          <p>Цветы долго сохраняют свежесть без химии из-за размещения каждого цветка в отдельной пробирке</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2.7C8 2.7 5 5.7 5 9.5c0 4.5 7 12 7 12s7-7.5 7-12c0-3.8-3-6.8-7-6.8z"/><path d="M9 9.5c0-1.7 1.3-3 3-3"/></svg>
+          </div>
+          <h4>Простота обслуживания</h4>
+          <p>Добавляйте раз в 3 дня свежую воду. Или доверьте эту работу нашему сотруднику</p>
+        </div>
+        <div class="card reveal d3">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h4>Чисто и быстро</h4>
+          <p>Наш сотрудник заменит за 15 минут пробирки в композиции на новые со свежими цветами</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h4>Необычный вид</h4>
+          <p>Деревянные подставки с пробирками выглядят эффектно и привлекают внимание</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-section">
+    <div class="image-section-bg" id="decorBg" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=1920&q=80');"></div>
+    <div class="container">
+      <h2 class="reveal">Декорирование свежими цветами</h2>
+      <p class="subhead reveal d1">Стильно и эффектно в любом интерьере</p>
+
+      <div class="decor-grid reveal d2">
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>В офис</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M3 10h18"/></svg>В приемную</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M4 20V8l8-5 8 5v12M4 20h16M10 20v-6h4v6"/></svg>На ресепшен</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 2v3M10 2v3M14 2v3"/></svg>В кафе</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>В салон</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 21v-4h6v4"/></svg>В отель</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>Для детских садов</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-5v7M5 12v6c0 1 3 3 7 3s7-2 7-3v-6"/></svg>Для школ</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg>Для вузов</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>Для диагностических центров</span>
+        <span class="decor-tag"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>Для научно-исследовательских центров</span>
+      </div>
+
+      <div class="reveal d3" style="margin-top: 44px;">
+        <a href="#cta" class="btn btn-accent">Хотите подобрать декор для своего помещения?</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Букет в пробирках с обслуживанием</h2>
+      <p class="subhead reveal d1">Бизнес-подарок с WOW-эффектом</p>
+
+      <div class="grid-4">
+        <div class="card reveal d1">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4c0 1.5.8 2.8 2 3.5V10a4 4 0 0 0-4 4v6h12v-6a4 4 0 0 0-4-4V9.5c1.2-.7 2-2 2-3.5a4 4 0 0 0-4-4z"/><path d="M12 10v6"/></svg>
+          </div>
+          <h4>Свежо</h4>
+          <p>В магазинах такое не продают</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.2 3a2 2 0 0 0-2.8 0L3 12.4V21h8.6l9.4-9.4a2 2 0 0 0 0-2.8l-5.8-5.8z"/><path d="M9 21l-3-3M14 16l-3-3"/></svg>
+          </div>
+          <h4>Стильно</h4>
+          <p>Вы можете нанести логотип</p>
+        </div>
+        <div class="card reveal d3">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.2-8.6"/><path d="M21 4v5h-5"/><path d="M12 8v4l3 2"/></svg>
+          </div>
+          <h4>Необычно</h4>
+          <p>Цветы регулярно меняют</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+          </div>
+          <h4>Функционально</h4>
+          <p>Повторное использование</p>
+        </div>
+      </div>
+
+      <p class="reveal d5" style="margin-top: 36px; font-size: 1.05rem; color: var(--text-soft); font-style: italic;">
+        Универсальный подарок в рамках бизнес-этикета
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Нестандартное решение для корпоративного подарка</h2>
+      <p class="subhead reveal d1">Подарите праздник надолго</p>
+
+      <div class="grid-4">
+        <div class="card reveal d1" style="text-align: center;">
+          <div class="card-icon" style="margin-left: auto; margin-right: auto;">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/><path d="M12 3v4"/></svg>
+          </div>
+          <h4>Юбилей компании</h4>
+        </div>
+        <div class="card reveal d2" style="text-align: center;">
+          <div class="card-icon" style="margin-left: auto; margin-right: auto;">
+            <svg viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/><path d="M12 22V8"/></svg>
+          </div>
+          <h4>8 марта</h4>
+        </div>
+        <div class="card reveal d3" style="text-align: center;">
+          <div class="card-icon" style="margin-left: auto; margin-right: auto;">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21 8 13.8l-6-4.4h7.6z"/></svg>
+          </div>
+          <h4>Значительное событие</h4>
+        </div>
+        <div class="card reveal d4" style="text-align: center;">
+          <div class="card-icon" style="margin-left: auto; margin-right: auto;">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16h16M12 11V7M9 4h6v3a3 3 0 0 1-6 0z"/></svg>
+          </div>
+          <h4>Юбилей сотрудника</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Букет в пробирках с логотипом компании</h2>
+      <p class="subhead reveal d1">Делайте бренд узнаваемым — произведите впечатление</p>
+
+      <div class="logo-carousel reveal d2">
+        <div style="overflow: hidden;">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 6-6"/></svg>
+              </div>
+              <div class="logo-sub">Company A</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><path d="M12 3l9 6v12H3V9l9-6z"/><path d="M9 21v-6h6v6"/></svg>
+              </div>
+              <div class="logo-sub">Company B</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg>
+              </div>
+              <div class="logo-sub">Company C</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><path d="M12 2l4 8h-8l4-8zM12 22l-4-8h8l-4 8zM2 12l8-4v8l-8-4zM22 12l-8 4v-8l8 4z"/></svg>
+              </div>
+              <div class="logo-sub">Company D</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <div class="logo-sub">Company E</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prevBtn" aria-label="Назад">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-btn" id="nextBtn" aria-label="Вперёд">
+            <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="container">
+      <h2 class="reveal">Дубовые подставки для букетов</h2>
+      <p class="subhead reveal d1">Выберите форму и количество цветов</p>
+
+      <div class="grid-3" style="margin-top: 12px;">
+        <div class="product-card reveal d1">
+          <div class="product-image">
+            <div class="vase-mark">
+                <img src="images/3roses.png" alt="3 розы">
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-price">2000 руб</div>
+            <div class="product-name">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+              3 розы
+            </div>
+            <p class="product-desc">Треугольная подставка на 3 пробирки</p>
+            <div class="product-size">Размер подставки 162×173×230 мм</div>
+            <a href="#cta" class="btn btn-small">Заказать</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal d2">
+          <div class="product-image">
+            <div class="vase-mark">
+                <img src="images/5roses.png" alt="5 роз">
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-price">2500 руб</div>
+            <div class="product-name">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+              5 роз
+            </div>
+            <p class="product-desc">Прямоугольная подставка на 5 пробирок</p>
+            <div class="product-size">Размер подставки 77×270×230 мм</div>
+            <a href="#cta" class="btn btn-small">Заказать</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal d3">
+          <div class="product-image">
+            <div class="vase-mark">
+                <img src="images/7roses.png" alt="7 роз">
+            </div>
+          </div>
+          <div class="product-body"> 
+            <div class="product-price">3000 руб</div>
+            <div class="product-name">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+              7 роз
+            </div>
+            <p class="product-desc">Круглая подставка на 7 цветочных пробирок</p>
+            <div class="product-size">Размер подставки 170×230 мм</div>
+            <a href="#cta" class="btn btn-small">Заказать</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal d1">
+          <div class="product-image">
+            <div class="vase-mark">
+                <img src="images/9roses.png" alt="9 роз">
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-price">4000 руб</div>
+            <div class="product-name">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+              9 роз
+            </div>
+            <p class="product-desc">Квадратная подставка на 9 пробирок</p>
+            <div class="product-size">Размер подставки 153×173×230 мм</div>
+            <a href="#cta" class="btn btn-small">Заказать</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal d2">
+          <div class="product-image">
+            <div class="vase-mark">
+                <img src="images/17roses.png" alt="17 роз">
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-price">6000 руб</div>
+            <div class="product-name">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+              17 роз
+            </div>
+            <p class="product-desc">Прямоугольная подставка на 17 пробирок</p>
+            <div class="product-size">Размер подставки 105×467×230 мм</div>
+            <a href="#cta" class="btn btn-small">Заказать</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal d3">
+          <div class="product-image">
+            <div class="vase-mark">
+                <img src="images/25roses.png" alt="25 роз">
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-price">8000 руб</div>
+            <div class="product-name">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/></svg>
+              25 роз
+            </div>
+            <p class="product-desc">Прямоугольная подставка на 25 пробирок</p>
+            <div class="product-size">Размер подставки 250×273×230 мм</div>
+            <a href="#cta" class="btn btn-small">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-section">
+    <div class="image-section-bg" id="benefitBg" style="background-image: url('https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=1920&q=80');"></div>
+    <div class="container">
+      <h2 class="reveal">Почему букет в пробирках с абоненткой это выгодно</h2>
+      <p class="subhead reveal d1">Вы экономите время на поиске свежих цветов. Наш сотрудник в условленное время заменит пробирки с цветами.</p>
+
+      <div class="grid-3">
+        <div class="card reveal d2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/><path d="M12 22V8"/></svg>
+          </div>
+          <h4>Свежие цветы без:</h4>
+          <p>Задержек • Ожидания • Неприятных сюрпризов</p>
+        </div>
+        <div class="card reveal d3">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+          </div>
+          <h4>Необычный подарок</h4>
+          <p>Вы решаете вопрос с необычным подарком и дарите не просто памятную вещь, но еще и внимание</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+          </div>
+          <h4>Свежесть впечатлений</h4>
+          <p>Замена цветов свежими с заменой сорта и расцветки исключает эффект однообразия</p>
+        </div>
+      </div>
+
+      <p class="reveal d5" style="margin-top: 40px; font-size: 1.05rem; color: var(--text-soft);">
+        Для корпоративных клиентов на абонентке действуют специальные условия.
+        <a href="#cta" style="color: var(--green); text-decoration: underline; text-underline-offset: 3px;">Оставьте email и телефон</a>, чтобы связаться с вами
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Мы гарантируем</h2>
+
+      <div class="guarantee-list">
+        <div class="guarantee-item reveal d1">
+          <div class="guarantee-check">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <h4>Свежесть цветов</h4>
+            <p>Мы закупаем цветы у поставщика утром в день доставки букета</p>
+          </div>
+        </div>
+        <div class="guarantee-item reveal d2">
+          <div class="guarantee-check">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <h4>Доставку в срок</h4>
+            <p>Цветы будут доставлены в оговоренное в договоре время</p>
+          </div>
+        </div>
+        <div class="guarantee-item reveal d3">
+          <div class="guarantee-check">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <h4>Соответствие внешнего вида</h4>
+            <p>Вы получите ту композицию, которую выбрали в каталоге без сюрпризов</p>
+          </div>
+        </div>
+        <div class="guarantee-item reveal d4">
+          <div class="guarantee-check">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <h4>Всегда свежие цветы в помещении</h4>
+            <p>В течение действия договора об абонентском обслуживании</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Как заказать корпоративное обслуживание</h2>
+      <p class="subhead reveal d1">5 шагов до абонемента на свежие цветы</p>
+
+      <div class="steps-wrapper">
+        <div class="step-item reveal d1">
+          <div class="step-num">1</div>
+          <p>Вы оставляете контакты</p>
+        </div>
+        <div class="step-item reveal d2">
+          <div class="step-num">2</div>
+          <p>Обсуждаете с менеджером условия сотрудничества</p>
+        </div>
+        <div class="step-item reveal d3">
+          <div class="step-num">3</div>
+          <p>Подписываем договор предоставления услуг</p>
+        </div>
+        <div class="step-item reveal d4">
+          <div class="step-num">4</div>
+          <p>Вы оплачиваете выставленный счет</p>
+        </div>
+        <div class="step-item reveal d5">
+          <div class="step-num">5</div>
+          <p>Цветочные композиции радуют вас</p>
+        </div>
+      </div>
+
+      <div class="reveal d6" style="margin-top: 44px;">
+        <a href="#cta" class="btn">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Эти вопросы часто задают</h2>
+
+      <div class="reveal d1" style="margin-top: 8px;">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Как долго сохраняются цветы в пробирках?</span>
+            <span class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="accordion-content">
+            <p>Каждый цветок помещен в отдельную пробирку с прохладной водой. Они сохранятся дольше за счет того, что мы берем свежесрезанные цветы у поставщика, а отдельная пробирка снижает размножение гнилостных бактерий.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Что если пробирка разобьется?</span>
+            <span class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="accordion-content">
+            <p>Мы бесплатно ее заменим в рамках программы обслуживания.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Можно ли добавлять что-то в воду для окрашивания?</span>
+            <span class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="accordion-content">
+            <p>Нет, только чистая вода. Но возможно окрашивание воды в пробирках, чтобы достичь эффекта окрашивания белых цветов, если возникнет такое пожелание у клиента. Такой вариант хорош для детских заведений.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Чем это отличается от сублимированных роз?</span>
+            <span class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="accordion-content">
+            <p>Да, вы правы, сублимированные розы в стекле, в колбе, в акриловых боксах сохраняют безупречный вид от 3 до 5 лет. Но статичность даже в интерьере офиса за 5 лет может надоесть даже самым консервативным натурам. Это хороший вариант для случаев, когда вы точно знаете, что живые цветы недопустимы по какой-то причине.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>В чем преимущество перед цветами в коробке?</span>
+            <span class="accordion-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="accordion-content">
+            <p>Действительно, букет в пробирках выглядит нестандартно и рушит стереотипы. Цветы в коробке производят WOW-эффект только в первые мгновения и за счет количества от 25 штук. Вскоре они увядают и отправляются в мусор вместе с коробкой, на которую нанесена информация о вашем бренде. Букет в пробирках на стойке с нанесенным на нее логотипом и абонентское обслуживание продливают этот WOW-эффект на несколько месяцев, практически до бесконечности за счет своевременной смены цветов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" style="padding-bottom: 110px;">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>Готовы заказать букет в пробирках с абонентским обслуживанием?</h2>
+        <p class="subhead">Оставьте заявку или позвоните нам по телефону в Москве</p>
+
+        <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами.');">
+          <div class="form-row">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+          </div>
+          <button type="submit" class="btn">Оставить заявку</button>
+        </form>
+
+        <a href="tel:+71111111111" class="phone-link">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+          +7 (111) 111-11-11
+        </a>
+
+        <p class="form-note">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7z"/>
+                <path d="M12 22V8"/>
+                <path d="M9 12l3-3 3 3"/>
+              </svg>
+            </span>
+            <span class="logo-text">
+              <span class="name">Flora Lab</span>
+              <span class="tag">цветы в пробирках</span>
+            </span>
+          </a>
+          <p>Абонентское обслуживание цветами в пробирках для офисов, кафе, отелей и корпоративных подарков. Свежесть, стиль и WOW-эффект на весь срок договора.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Telegram">
+              <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.3 4.5l1.3 5-5.1-1.3a8.5 8.5 0 1 1 5.1-8.2z"/><path d="M8.5 8.5c0 4 3 7 7 7l1.5-1.5-2-1.5-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1.5-2L9.5 8.5z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+            </a>
+            <a href="tel:+79152806622" class="social-link" aria-label="Телефон">
+              <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Разделы</h5>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#cta">Абонемент</a></li>
+            <li><a href="#cta">Декор для офиса</a></li>
+            <li><a href="#cta">Корпоративные подарки</a></li>
+            <li><a href="#cta">Отзывы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Услуги</h5>
+          <ul>
+            <li><a href="#cta">Доставка букетов</a></li>
+            <li><a href="#cta">Аренда стоек</a></li>
+            <li><a href="#cta">Замена цветов</a></li>
+            <li><a href="#cta">Нанесение логотипа</a></li>
+            <li><a href="#cta">Дизайн композиций</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Контакты</h5>
+          <a href="tel:+79152806622" class="footer-phone-big">+7 (111) 111-11-11</a>
+          <a href="mailto:test@test.ru" class="footer-contact-item">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            test@test.ru
+          </a>
+          <a href="#" class="footer-contact-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s-8-7.5-8-13a8 8 0 0 1 16 0c0 5.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+            Москва, ул. Цветочная
+          </a>
+          <div class="footer-contact-item">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Ежедневно, 9:00 – 21:00
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Flora Lab. Все права защищены.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Публичная оферта</a>
+          <a href="#">Реквизиты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
